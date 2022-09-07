@@ -13,7 +13,7 @@ body {
   font-size: 14px;
   line-height: 2;
 }
-ul {
+.list {
   list-style: none;
 }
 /* логотип */
@@ -56,6 +56,7 @@ ul {
 }
 .site-nav .current-link {
   color: var(--accent-text-color);
+  text-decoration: none;
 }
 .site-nav .link:active {
   color: pink;
@@ -63,7 +64,8 @@ ul {
 
 /* контакти */
 
-.contacts {
+.contacts .link,
+.contacts .tel {
   color: var(--primary-text-color);
   text-decoration: none;
   font-weight: 500;
@@ -73,7 +75,9 @@ ul {
 }
 
 .contacts .link:hover,
-.contacts .link:focus,
+.contacts .link:focus {
+  color: var(--accent-text-color);
+}
 .contacts .tel:hover,
 .contacts .tel:focus {
   color: var(--accent-text-color);
@@ -89,6 +93,7 @@ ul {
   line-height: 1.4;
   text-align: center;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 .btn {
   background-color: #2196f3;
@@ -131,6 +136,7 @@ ul {
 
 /* команда */
 .team-title {
+  background-color: #f5f4fa;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -142,9 +148,14 @@ ul {
 }
 
 /* PORTFOLIO */
-.main-title {
-  display: none;
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
+
 .filter-button {
   background-color: #f5f4fa;
   color: var(--title-text-color);
@@ -174,7 +185,8 @@ ul {
 }
 
 .footer .link {
-  color: var(--primary-text-color);
+  color:rgba(255, 255, 255, 0.6);
+  font-style: normal;
   text-decoration: none;
 }
 .footer .link:hover,
@@ -182,14 +194,16 @@ ul {
   color: var(--accent-text-color);
 }
 .footer .tel {
-  color: var(--primary-text-color);
+ color:rgba(255, 255, 255, 0.6);
+ font-style: normal;
   text-decoration: none;
 }
 .footer .tel:hover,
 .footer .tel:focus {
   color: var(--accent-text-color);
 }
-address {
+.physical-adress {
   color: #ffffff;
   font-style: normal;
+  text-decoration: none;
 }
